@@ -29,11 +29,11 @@ document.getElementById("discordBtn").addEventListener("click", () => {
 });
 
 function getBadge(points) {
-  if (points >= 350) return {label:"Legendary", class:"legendary"};
-  if (points >= 200) return {label:"Master", class:"master"};
+  if (points >= 200) return {label:"Legendary", class:"legendary"};
+  if (points >= 150) return {label:"Master", class:"master"};
   if (points >= 100) return {label:"Expert", class:"expert"};
-  if (points >= 75)  return {label:"Advanced", class:"advanced"};
-  if (points >= 35)  return {label:"Intermediate", class:"intermediate"};
+  if (points >= 50)  return {label:"Advanced", class:"advanced"};
+  if (points >= 20)  return {label:"Intermediate", class:"intermediate"};
   return {label:"Novice", class:"novice"};
 }
 
