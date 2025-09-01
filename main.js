@@ -35,15 +35,25 @@ const subPage = document.getElementById("gamemodePageSub");
 const prevBtn = document.getElementById("prevPageBtn");
 const nextBtn = document.getElementById("nextPageBtn");
 
-prevBtn.addEventListener("click", () => {
+function showMainPage() {
   mainPage.classList.add("active");
   subPage.classList.remove("active");
-});
+  prevBtn.disabled = true;
+  nextBtn.disabled = false;
+}
 
-nextBtn.addEventListener("click", () => {
+function showSubPage() {
   subPage.classList.add("active");
   mainPage.classList.remove("active");
-});
+  nextBtn.disabled = true;
+  prevBtn.disabled = false;
+}
+
+prevBtn.addEventListener("click", showMainPage);
+nextBtn.addEventListener("click", showSubPage);
+
+// start with Main page visible
+showMainPage();
 
 
 function getBadge(points) {
