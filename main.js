@@ -28,6 +28,16 @@ document.getElementById("discordBtn").addEventListener("click", () => {
   window.open("https://discord.gg/Mm4qkZvt9r", "_blank");
 });
 
+document.getElementById("pageMainBtn").addEventListener("click", () => {
+  document.querySelectorAll(".gamemode-page").forEach(p => p.classList.remove("active"));
+  document.querySelector('.gamemode-page[data-page="main"]').classList.add("active");
+});
+
+document.getElementById("pageSubBtn").addEventListener("click", () => {
+  document.querySelectorAll(".gamemode-page").forEach(p => p.classList.remove("active"));
+  document.querySelector('.gamemode-page[data-page="sub"]').classList.add("active");
+});
+
 function getBadge(points) {
   if (points >= 200) return {label:"Legendary", class:"legendary"};
   if (points >= 150) return {label:"Master", class:"master"};
