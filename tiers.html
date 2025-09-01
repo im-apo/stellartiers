@@ -217,16 +217,6 @@
             box-shadow: 0 0 18px rgba(200,200,200,0.7);
         }
 
-		.gamemode-group {
-    		display: flex;
-    		align-items: stretch; /* ensures separator matches tab height */
-		}
-
-		.gamemode-separator {
-    		width: 2px;
-    		background: rgba(70, 70, 70, 0.3);
-		}
-
         .gamemode-icon {
             width: 24px;
             height: 24px;
@@ -749,13 +739,10 @@
         </div>
         <div class="leaderboard">
             <div class="gamemode-tabs" id="gamemodeTabs">
-				<div class="gamemode-group">
-                	<div class="gamemode-tab active" data-gamemode="overall">
-						<img src="Overall.svg" alt="Overall" class="gamemode-icon"
-							onerror="this.style.display='none'; this.nextSibling.innerHTML='🏆';">
-						<span>Overall</span>
-						<div class="gamemode-separator"></div>
-					</div>
+            	<div class="gamemode-tab active" data-gamemode="overall">
+					<img src="Overall.svg" alt="Overall" class="gamemode-icon"
+						onerror="this.style.display='none'; this.nextSibling.innerHTML='🏆';">
+					<span>Overall</span>
 				</div>
                 <div class="gamemode-tab" data-gamemode="crystal">
 					<img src="Crystal.svg" alt="Crystal" class="gamemode-icon"
