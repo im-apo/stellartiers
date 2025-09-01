@@ -155,5 +155,4 @@ document.getElementById("nextPageBtn").addEventListener("click", () => {
   showPage(currentPageIndex);
 });
 
-// initialize on main
 showPage(0);
