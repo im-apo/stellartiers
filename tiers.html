@@ -716,7 +716,6 @@
 <body>
     <div class="container">
         <div class="header">
-            
             <div class="action-buttons">
                 <button class="action-button" id="tierInfoBtn">
                     <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="#3b82f6"/><text x="12" y="17" font-size="12" text-anchor="middle" fill="#fff" font-family="Arial" font-weight="bold">i</text></svg>
@@ -746,12 +745,13 @@
         </div>
         <div class="leaderboard">
             <div class="gamemode-tabs" id="gamemodeTabs">
-            	<div class="gamemode-tab active" data-gamemode="overall">
-					<img src="Overall.svg" alt="Overall" class="gamemode-icon"
-						onerror="this.style.display='none'; this.nextSibling.innerHTML='🏆';">
-					<span>Overall</span>
-				</div>
-				<div class="gamemode-separator"></div>
+				 <!-- Main Tiers -->
+            	 <div class="gamemode-tab active" data-gamemode="overall">
+      				<img src="Overall.svg" alt="Overall" class="gamemode-icon">
+      				<span>Overall</span>
+    			</div>
+    			<div class="gamemode-separator"></div>
+				<!-- Main Tiers gamemodes -->
                 <div class="gamemode-tab" data-gamemode="crystal">
 					<img src="Crystal.svg" alt="Crystal" class="gamemode-icon"
 						onerror="this.style.display='none'; this.nextSibling.innerHTML='💎';">
@@ -797,6 +797,15 @@
 						onerror="this.style.display='none'; this.nextSibling.innerHTML='💎';">
                     <span>Diasmp</span>
                 </div>
+			</div>
+			<!-- Sub Tiers -->
+  			<div class="gamemode-page" data-page="sub">
+    			<div class="gamemode-tab active" data-gamemode="overall">
+      			<img src="Overall.svg" alt="Overall" class="gamemode-icon">
+      		<span>Overall</span>
+    		</div>
+    		<div class="gamemode-separator"></div>
+				<!-- Sub Tiers gamemodes -->
 				<div class="gamemode-tab" data-gamemode="speed">
                     <img src="Speed.svg" alt="Speed" class="gamemode-icon"
 						onerror="this.style.display='none'; this.nextSibling.innerHTML='🚅';">
@@ -868,7 +877,11 @@
         <button id="closeModal" class="close-btn">&times;</button>
         <div id="modalBody"></div>
     </div>
-    </div>
+<!-- Page Switch Buttons -->
+  <div class="gamemode-page-switch">
+    <button id="pageMainBtn">Main Tiers</button>
+    <button id="pageSubBtn">Sub Tiers</button>
+  </div>
 </div>
 <div id="tierInfoModal" class="modal" style="display:none;">
   <div class="modal-content tier-info-modal">
