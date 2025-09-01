@@ -168,7 +168,16 @@
 		.search-box::placeholder {
 			color: #7a7a7a;
 		}
+		.gamemode-page {
+  			display: none;
+  			flex-wrap: wrap;
+  			gap: 10px;
+  			justify-content: center;
+		}
 
+		.gamemode-page.active {
+  			display: flex;
+		}
         .gamemode-tabs {
             display: flex;
             flex-wrap: wrap;
@@ -184,6 +193,26 @@
             justify-content: center;
         }
 
+		.gamemode-page-switch {
+  			width: 100%;
+ 		 	margin-top: 10px;
+  			text-align: center;
+		}
+
+		.gamemode-page-switch button {
+  			background: rgba(30,30,30,0.9);
+  			border: 1px solid rgba(80,80,80,0.6);
+  			border-radius: 10px;
+  			padding: 6px 12px;
+  			margin: 0 5px;
+  			cursor: pointer;
+  			color: #e5e5e5;
+  			font-weight: 600;
+		}
+
+.gamemode-page-switch button:hover {
+  background: #444;
+}
 
         .gamemode-tab {
             background: rgba(30, 30, 30, 0.95);
