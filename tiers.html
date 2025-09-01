@@ -184,12 +184,6 @@
     		align-items: flex-start;
 		}
 
-		.gamemode-group {
-    		display: flex;
-    		align-items: center;
-    		gap: 10px;
-    		position: relative;
-		}
 
         .gamemode-tab {
             background: rgba(30, 30, 30, 0.95);
@@ -223,9 +217,13 @@
             box-shadow: 0 0 18px rgba(200,200,200,0.7);
         }
 
-        .gamemode-separator {
+		.gamemode-group {
+    		display: flex;
+    		align-items: stretch; /* ensures separator matches tab height */
+		}
+
+		.gamemode-separator {
     		width: 2px;
-    		height: 100%;
     		background: rgba(70, 70, 70, 0.3);
 		}
 
