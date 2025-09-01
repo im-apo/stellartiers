@@ -233,6 +233,21 @@
   			box-shadow: 0 0 18px rgba(200,200,200,0.7);
 		}
 
+		.gamemode-tabs {
+  			display: flex;
+  			align-items: center;
+  			justify-content: center;
+  			gap: 15px;
+		}
+
+		.gamemode-tab-container {
+  			display: flex;
+  			flex-direction: row;
+  			flex-wrap: wrap;
+  			justify-content: center;
+  			flex: 1;
+		}
+
         .gamemode-tab {
             background: rgba(30, 30, 30, 0.95);
             border: 2px solid rgba(80, 80, 80, 0.6);
@@ -794,6 +809,19 @@
         <div class="leaderboard">
             <!-- Main Tiers -->
 <div id="gamemodePageMain" class="gamemode-page active">
+<div class="gamemode-switcher">
+  <button id="prevPageBtn" class="arrow-btn">⟵</button>
+  
+  <!-- Gamemode groups -->
+  <div id="gamemodePageMain" class="gamemode-page active">
+    <!-- your main gamemode tabs here -->
+  </div>
+  <div id="gamemodePageSub" class="gamemode-page">
+    <!-- your sub gamemode tabs here -->
+  </div>
+
+  <button id="nextPageBtn" class="arrow-btn">⟶</button>
+</div>
   <div class="gamemode-tab active" data-gamemode="overall">
     <img src="Overall.svg" alt="Overall" class="gamemode-icon">
     <span>Overall</span>
@@ -969,20 +997,6 @@
     </div>
   </div>
 </div>
-<div class="gamemode-switcher">
-  <button id="prevPageBtn" class="arrow-btn">⟵</button>
-  
-  <!-- Gamemode groups -->
-  <div id="gamemodePageMain" class="gamemode-page active">
-    <!-- your main gamemode tabs here -->
-  </div>
-  <div id="gamemodePageSub" class="gamemode-page">
-    <!-- your sub gamemode tabs here -->
-  </div>
-
-  <button id="nextPageBtn" class="arrow-btn">⟶</button>
-</div>
-
     <script src="main.js" defer></script>
 </body>
 </html>
