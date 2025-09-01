@@ -218,10 +218,10 @@
 
         .gamemode-separator {
     		width: 2px;
-    		min-height: 40px;             /* ✅ always at least 40px tall */
+    		min-height: 40px;
     		background: rgba(70, 70, 70, 0.2);
-    		margin: 0 20px;
-    		align-self: stretch;          /* ✅ stretch if the row gets taller */
+    		margin: 20px 20px 0 20px;  /* ⬅ moves separator down */
+    		align-self: flex-start;    /* ⬅ stick it to the top row */
 		}
 
         .gamemode-icon {
