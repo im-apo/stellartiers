@@ -21,7 +21,7 @@
         body {
 			font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 			background: linear-gradient(135deg, #0a0a0a, #1a1a1a 60%, #2a2a2a 100%);
-			color: #e5e5e5; /* neutral light gray text */
+			color: #e5e5e5;
 			min-height: 100vh;
 			line-height: 1.6;
 			overflow-x: hidden;
@@ -107,7 +107,7 @@
 			border: 2px solid rgba(120, 120, 120, 0.6);
 			border-radius: 16px;
 			padding: 12px 20px;
-			color: #d1d5db; /* lighter gray */
+			color: #d1d5db;
 			font-size: 14px;
 			font-weight: 600;
 			cursor: pointer;
@@ -467,7 +467,6 @@
             text-transform: uppercase;
         }
 		
-        /* Updated tier colors with modern light theme */
         .tier.lt5 { background: linear-gradient(135deg, #d97706, #b45309); color: #fff; border: 2px solid rgb(59, 130, 246, 0.2);}
 		.tier.ht5 { background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #000; border: 2px solid rgb(59, 130, 246, 0.2);}
         .tier.lt4 { background: linear-gradient(135deg, #059669, #064e3b); color: #fff; border: 2px solid rgb(59, 130, 246, 0.2);}
@@ -479,7 +478,6 @@
         .tier.lt1 { background: linear-gradient(135deg, #f43f5e, #be123c); color: #fff; border: 2px solid rgb(59, 130, 246, 0.2);}
         .tier.ht1 { background: linear-gradient(135deg, #ec4899, #db2777); color: #000; border: 2px solid rgb(59, 130, 246, 0.2);}
 		
-		/* Modal base */
 		.tier-info-modal {
 			background: rgba(20, 20, 20, 0.96);
 			border-radius: 16px;
@@ -507,7 +505,6 @@
 			color: #fff;
 		}
 
-/* Title */
 		.tier-info-modal .modal-title {
 			text-align: center;
 			font-size: 1.8rem;
@@ -518,7 +515,6 @@
 			-webkit-text-fill-color: transparent;
 		}
 
-/* Description */
 		.tier-info-modal .modal-desc {
 			margin-bottom: 18px;
 			text-align: center;
@@ -526,7 +522,6 @@
 			font-size: 0.95rem;
 		}
 
-/* Table */
 		.tier-info-modal .tier-table {
 			width: 100%;
 			border-collapse: collapse;
@@ -570,8 +565,8 @@
 			left: 50%;
 			transform: translateX(-50%);
     
-			background: #2a2a2a; /* Dark gray background */
-			color: #f5f5f5; /* Light text */
+			background: #2a2a2a;
+			color: #f5f5f5;
     
 			padding: 8px 16px;
 			border-radius: 12px;
@@ -580,9 +575,9 @@
 			white-space: nowrap;
 			z-index: 1000;
     
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Dark glow */
-			border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
-}
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+			border: 1px solid rgba(255, 255, 255, 0.1);
+		}
 
         .loading {
             text-align: center;
@@ -676,7 +671,6 @@
                 height: 24px;
             }
         }
-        /* DARK MODE SUPPORT */
 
         :root .player-row:hover {
             background: rgba(255, 255, 255, 0.05);
@@ -811,7 +805,6 @@
     <button id="prevPageBtn" class="arrow-btn">⟵</button>
 
     <div class="gamemode-tab-container">
-      <!-- Main Gamemode Tabs -->
       <div id="gamemodePageMain" class="gamemode-page active">
         <div class="gamemode-tab active" data-gamemode="overall">
           <img src="Overall.svg" alt="Overall" class="gamemode-icon">
@@ -864,8 +857,6 @@
           <span>Diasmp</span>
         </div>
       </div>
-
-      <!-- Sub Gamemode Tabs -->
       <div id="gamemodePageSub" class="gamemode-page">
 		<div class="gamemode-tab active" data-gamemode="overall">
           <img src="Overall.svg" alt="Overall" class="gamemode-icon">
