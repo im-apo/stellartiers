@@ -216,11 +216,12 @@
             box-shadow: 0 0 18px rgba(200,200,200,0.7);
         }
 
-        gamemode-separator {
+        .gamemode-separator {
     		width: 2px;
+    		min-height: 40px;             /* ✅ always at least 40px tall */
     		background: rgba(70, 70, 70, 0.2);
     		margin: 0 20px;
-    		align-self: stretch;   /* 🔥 make the separator extend to match height */
+    		align-self: stretch;          /* ✅ stretch if the row gets taller */
 		}
 
         .gamemode-icon {
