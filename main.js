@@ -23,25 +23,6 @@ function calculatePoints(player) {
   return total;
 }
 
-const mainPage = document.getElementById("gamemodePageMain");
-const subPage = document.getElementById("gamemodePageSub");
-const mainBtn = document.getElementById("pageMainBtn");
-const subBtn = document.getElementById("pageSubBtn");
-
-mainBtn.addEventListener("click", () => {
-  mainPage.classList.add("active");
-  subPage.classList.remove("active");
-  mainBtn.classList.add("active");
-  subBtn.classList.remove("active");
-});
-
-subBtn.addEventListener("click", () => {
-  subPage.classList.add("active");
-  mainPage.classList.remove("active");
-  subBtn.classList.add("active");
-  mainBtn.classList.remove("active");
-});
-
 function getBadge(points) {
   if (points >= 200) return {label:"Legendary", class:"legendary"};
   if (points >= 150) return {label:"Master", class:"master"};
@@ -143,6 +124,21 @@ document.getElementById("copyIpBtn").addEventListener("click", () => {
   const popup = document.getElementById("copyPopup");
   popup.style.display = "block";
   setTimeout(()=> popup.style.display="none", 2000);
+});
+
+const mainPage = document.getElementById("gamemodePageMain");
+const subPage = document.getElementById("gamemodePageSub");
+const prevBtn = document.getElementById("prevPageBtn");
+const nextBtn = document.getElementById("nextPageBtn");
+
+prevBtn.addEventListener("click", () => {
+  mainPage.classList.add("active");
+  subPage.classList.remove("active");
+});
+
+nextBtn.addEventListener("click", () => {
+  subPage.classList.add("active");
+  mainPage.classList.remove("active");
 });
 
 loadPlayers();
