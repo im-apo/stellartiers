@@ -27,15 +27,23 @@ function calculatePoints(player) {
 document.getElementById("discordBtn").addEventListener("click", () => {
   window.open("https://discord.gg/Mm4qkZvt9r", "_blank");
 });
+const mainPage = document.querySelector('.gamemode-page[data-page="main"]');
+const subPage = document.querySelector('.gamemode-page[data-page="sub"]');
+const mainBtn = document.getElementById("pageMainBtn");
+const subBtn = document.getElementById("pageSubBtn");
 
-document.getElementById("pageMainBtn").addEventListener("click", () => {
-  document.querySelectorAll(".gamemode-page").forEach(p => p.classList.remove("active"));
-  document.querySelector('.gamemode-page[data-page="main"]').classList.add("active");
+mainBtn.addEventListener("click", () => {
+  mainPage.classList.add("active");
+  subPage.classList.remove("active");
+  mainBtn.classList.add("active");
+  subBtn.classList.remove("active");
 });
 
-document.getElementById("pageSubBtn").addEventListener("click", () => {
-  document.querySelectorAll(".gamemode-page").forEach(p => p.classList.remove("active"));
-  document.querySelector('.gamemode-page[data-page="sub"]').classList.add("active");
+subBtn.addEventListener("click", () => {
+  subPage.classList.add("active");
+  mainPage.classList.remove("active");
+  subBtn.classList.add("active");
+  mainBtn.classList.remove("active");
 });
 
 function getBadge(points) {
