@@ -30,31 +30,6 @@ document.getElementById("copyIpBtn").addEventListener("click", () => {
   setTimeout(()=> popup.style.display="none", 2000);
 });
 
-const pages = ["gamemodePageMain", "gamemodePageSub"];
-let currentPageIndex = 0;
-
-function showPage(index) {
-  pages.forEach((id, i) => {
-    document.getElementById(id).classList.toggle("active", i === index);
-  });
-  currentPageIndex = index;
-}
-
-document.getElementById("prevPageBtn").addEventListener("click", () => {
-  currentPageIndex = (currentPageIndex - 1 + pages.length) % pages.length;
-  showPage(currentPageIndex);
-});
-
-document.getElementById("nextPageBtn").addEventListener("click", () => {
-  currentPageIndex = (currentPageIndex + 1) % pages.length;
-  showPage(currentPageIndex);
-});
-
-// start on main
-showPage(0);
-
-
-
 function getBadge(points) {
   if (points >= 200) return {label:"Legendary", class:"legendary"};
   if (points >= 150) return {label:"Master", class:"master"};
@@ -152,3 +127,33 @@ document.querySelectorAll(".gamemode-tab").forEach(tab => {
 });
 
 loadPlayers();
+
+const pages = ["gamemodePageMain", "gamemodePageSub"];
+let currentPageIndex = 0;
+
+function showPage(index) {
+  pages.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (el) {
+      if (i === index) {
+        el.classList.add("active");
+      } else {
+        el.classList.remove("active");
+      }
+    }
+  });
+  currentPageIndex = index;
+}
+
+document.getElementById("prevPageBtn").addEventListener("click", () => {
+  currentPageIndex = (currentPageIndex - 1 + pages.length) % pages.length;
+  showPage(currentPageIndex);
+});
+
+document.getElementById("nextPageBtn").addEventListener("click", () => {
+  currentPageIndex = (currentPageIndex + 1) % pages.length;
+  showPage(currentPageIndex);
+});
+
+// initialize on main
+showPage(0);
