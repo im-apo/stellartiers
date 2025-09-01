@@ -23,12 +23,8 @@ function calculatePoints(player) {
   return total;
 }
 
-// Discord button → open invite
-document.getElementById("discordBtn").addEventListener("click", () => {
-  window.open("https://discord.gg/Mm4qkZvt9r", "_blank");
-});
-const mainPage = document.querySelector('.gamemode-page[data-page="main"]');
-const subPage = document.querySelector('.gamemode-page[data-page="sub"]');
+const mainPage = document.getElementById("gamemodePageMain");
+const subPage = document.getElementById("gamemodePageSub");
 const mainBtn = document.getElementById("pageMainBtn");
 const subBtn = document.getElementById("pageSubBtn");
 
