@@ -170,19 +170,19 @@
 		}
 
         .gamemode-tabs {
-    		display: flex;
-    		flex-wrap: wrap;
-    		gap: 10px;
-    		margin-bottom: 30px;
-    		padding: 8px;
-    		background: rgba(25, 25, 25, 0.95);
-    		backdrop-filter: blur(20px);
-    		border-radius: 16px;
-    		border: 1px solid rgba(90, 90, 90, 0.5);
-    		box-shadow: 0 0 15px rgba(0,0,0,0.8);
-    		justify-content: center;
-    		align-items: flex-start;
-		}
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            padding: 8px;
+            background: rgba(25, 25, 25, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            border: 1px solid rgba(90, 90, 90, 0.5);
+            box-shadow: 0 0 15px rgba(0,0,0,0.8);
+            align-items: center;
+            justify-content: center;
+        }
 
 
         .gamemode-tab {
@@ -215,6 +215,13 @@
             color: #fff;
             font-weight: 700;
             box-shadow: 0 0 18px rgba(200,200,200,0.7);
+        }
+
+		.gamemode-separator {
+            width: 2px;
+            height: 40px;
+            background: rgba(70, 70, 70, 0.2);
+            margin: 0 20px;
         }
 
         .gamemode-icon {
@@ -744,6 +751,7 @@
 						onerror="this.style.display='none'; this.nextSibling.innerHTML='🏆';">
 					<span>Overall</span>
 				</div>
+				<div class="gamemode-separator"></div>
                 <div class="gamemode-tab" data-gamemode="crystal">
 					<img src="Crystal.svg" alt="Crystal" class="gamemode-icon"
 						onerror="this.style.display='none'; this.nextSibling.innerHTML='💎';">
