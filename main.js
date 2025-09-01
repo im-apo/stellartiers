@@ -30,30 +30,29 @@ document.getElementById("copyIpBtn").addEventListener("click", () => {
   setTimeout(()=> popup.style.display="none", 2000);
 });
 
-const mainPage = document.getElementById("gamemodePageMain");
-const subPage = document.getElementById("gamemodePageSub");
-const prevBtn = document.getElementById("prevPageBtn");
-const nextBtn = document.getElementById("nextPageBtn");
+const pages = ["gamemodePageMain", "gamemodePageSub"];
+let currentPageIndex = 0;
 
-function showMainPage() {
-  mainPage.classList.add("active");
-  subPage.classList.remove("active");
-  prevBtn.disabled = true;
-  nextBtn.disabled = false;
+function showPage(index) {
+  pages.forEach((id, i) => {
+    document.getElementById(id).classList.toggle("active", i === index);
+  });
+  currentPageIndex = index;
 }
 
-function showSubPage() {
-  subPage.classList.add("active");
-  mainPage.classList.remove("active");
-  nextBtn.disabled = true;
-  prevBtn.disabled = false;
-}
+document.getElementById("prevPageBtn").addEventListener("click", () => {
+  currentPageIndex = (currentPageIndex - 1 + pages.length) % pages.length;
+  showPage(currentPageIndex);
+});
 
-prevBtn.addEventListener("click", showMainPage);
-nextBtn.addEventListener("click", showSubPage);
+document.getElementById("nextPageBtn").addEventListener("click", () => {
+  currentPageIndex = (currentPageIndex + 1) % pages.length;
+  showPage(currentPageIndex);
+});
 
-// start with Main page visible
-showMainPage();
+// start on main
+showPage(0);
+
 
 
 function getBadge(points) {
