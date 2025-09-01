@@ -180,8 +180,8 @@
     		border-radius: 16px;
     		border: 1px solid rgba(90, 90, 90, 0.5);
     		box-shadow: 0 0 15px rgba(0,0,0,0.8);
-    		align-items: stretch;   /* 🔥 stretch children to match container height */
-   			justify-content: center;
+    		align-items: stretch;   /* ✅ force children (separator) to take full height */
+    		justify-content: center;
 		}
 
         .gamemode-tab {
@@ -218,11 +218,9 @@
 
         .gamemode-separator {
     		width: 2px;
-    		height: 40px; /* longer line so it spans rows */
     		background: rgba(70, 70, 70, 0.2);
-    		position: relative;
-    		top: 15px; /* shift the line downward */
     		margin: 0 20px;
+    		align-self: stretch;    /* ✅ makes the line stretch to container height */
 		}
 
         .gamemode-icon {
