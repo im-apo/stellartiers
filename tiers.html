@@ -217,12 +217,13 @@
         }
 
         .gamemode-separator {
-    		width: 2px;
-    		min-height: 40px;
-    		background: rgba(70, 70, 70, 0.2);
-    		margin: 20px 20px 0 20px;  /* ⬅ moves separator down */
-    		align-self: flex-start;    /* ⬅ stick it to the top row */
-		}
+    width: 2px;
+    height: 60px; /* longer line so it spans rows */
+    background: rgba(70, 70, 70, 0.2);
+    position: relative;
+    top: 15px; /* shift the line downward */
+    margin: 0 20px;
+}
 
         .gamemode-icon {
             width: 24px;
