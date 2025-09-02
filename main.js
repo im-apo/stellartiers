@@ -128,7 +128,7 @@ document.querySelectorAll(".gamemode-tab").forEach(tab => {
 
 loadPlayers();
 
-const pages = ["gamemodePageMain", "gamemodePageSub"];
+const pages = ["gamemodePageMain", "gamemodePageSub", "gamemodePageExtra"];
 let currentPageIndex = 0;
 
 function showPage(index) {
