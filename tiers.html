@@ -556,6 +556,34 @@
 			text-align: center;
 		}
 
+		.tier-info-modal .retired-tier-table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-bottom: 18px;
+		}
+
+		.tier-info-modal .retired-tier-table th {
+			text-align: left;
+			color: #bbb;
+			font-weight: 600;
+			padding: 6px 4px;
+			border-bottom: 1px solid rgba(120, 120, 120, 0.4);
+		}
+
+		.tier-info-modal .retired-tier-table th:nth-child(2) {
+			text-align: center;
+		}
+
+		.tier-info-modal .retired-tier-table td {
+			padding: 6px 4px;
+			color: #e0e0e0;
+			font-size: 0.95rem;
+		}
+
+		.tier-info-modal .retired-tier-table td:nth-child(2) {
+			text-align: center;
+		}
+
 
         .no-results {
             text-align: center;
@@ -974,15 +1002,10 @@
       <tbody>
       </tbody>
         <tr><td><span class="tier ht1">HT1</span></td><td style="text-align:center;">60</td>
-		<tr><td><span class="tier ht1">RHT1</span></td><td style="text-align:center;">60</td>
         <tr><td><span class="tier lt1">LT1</span></td><td style="text-align:center;">45</td>
-		<tr><td><span class="tier ht1">RLT1</span></td><td style="text-align:center;">45</td>
         <tr><td><span class="tier ht2">HT2</span></td><td style="text-align:center;">30</td>
-		<tr><td><span class="tier ht1">RHT2</span></td><td style="text-align:center;">30</td>
         <tr><td><span class="tier lt2">LT2</span></td><td style="text-align:center;">20</td>
-		<tr><td><span class="tier ht1">RLT2</span></td><td style="text-align:center;">20</td>
         <tr><td><span class="tier ht3">HT3</span></td><td style="text-align:center;">10</td>
-		<tr><td><span class="tier ht1">RHT3</span></td><td style="text-align:center;">10</td>
         <tr><td><span class="tier lt3">LT3</span></td><td style="text-align:center;">6</td>
         <tr><td><span class="tier ht4">HT4</span></td><td style="text-align:center;">4</td>
         <tr><td><span class="tier lt4">LT4</span></td><td style="text-align:center;">3</td>
@@ -1001,8 +1024,27 @@
         <li><span class="points-badge novice">Novice</span> &ndash; below 20 pts</li>
       </ul>
     </div>
-    <div style="text-align:center; color:#64748b; font-size:0.98em;">
+	<div style="text-align:center; color:#64748b; font-size:0.98em;">
       <em>Climb tiers in each gamemode to boost your overall rank!</em>
+    </div>
+	<table class="retired-tier-table">
+      <thead>
+        <tr>
+          <th>Retired Tier</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+		<tr><td><span class="tier ht1">RHT1</span></td><td style="text-align:center;">60</td>
+		<tr><td><span class="tier ht1">RLT1</span></td><td style="text-align:center;">45</td>
+		<tr><td><span class="tier ht1">RHT2</span></td><td style="text-align:center;">30</td>
+		<tr><td><span class="tier ht1">RLT2</span></td><td style="text-align:center;">20</td>
+		<tr><td><span class="tier ht1">RHT3</span></td><td style="text-align:center;">10</td>
+      </tbody>
+    </table>
+	<div style="text-align:center; color:#64748b; font-size:0.98em;">
+      <em>Inactive players who choose to retire will be retired at their peak Tier on their profile. Peak Tiers are a good way for players to retain their points after earning a rank. Players without a peak tier will typically be prioritized in match assignment.</em>
     </div>
   </div>
 </div>
