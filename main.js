@@ -1,7 +1,7 @@
 const tierPoints = {
   RHT1: 60, RLT1: 45,
   RHT2: 30, RLT2: 20,
-  RHT3: 10, RHT3: 6,
+  RHT3: 10, RLT3: 6,
   HT1: 60, LT1: 45,
   HT2: 30, LT2: 20,
   HT3: 10, LT3: 6,
