@@ -1,11 +1,11 @@
 const tierPoints = {
-  HT1: 60, LT1: 45,
-  RHT1: 60, RLT1: 45,
-  HT2: 30, LT2: 20,
-  RHT2: 30, RLT2: 20,
-  HT3: 10, LT3: 6,
-  HT4: 4, LT4: 3,
-  HT5: 2,  LT5: 1
+   RHT1: 85, RLT1: 70,
+   HT1: 85, LT1: 70,
+   RHT2: 50, RLT2: 40,
+   HT2: 50, LT2: 40,
+   HT3: 20, LT3: 15,
+   HT4: 8, LT4: 6,
+   HT5: 4,  LT5: 2
 };
 
 let players = [];
