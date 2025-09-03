@@ -33,8 +33,8 @@ document.getElementById("copyIpBtn").addEventListener("click", () => {
 });
 
 function getBadge(points) {
-  if (points >= 200) return {label:"Legendary", class:"legendary"};
-  if (points >= 150) return {label:"Master", class:"master"};
+  if (points >= 300) return {label:"Legendary", class:"legendary"};
+  if (points >= 200) return {label:"Master", class:"master"};
   if (points >= 100) return {label:"Expert", class:"expert"};
   if (points >= 50)  return {label:"Advanced", class:"advanced"};
   if (points >= 20)  return {label:"Intermediate", class:"intermediate"};
