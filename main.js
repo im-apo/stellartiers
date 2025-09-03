@@ -12,7 +12,7 @@ let players = [];
 let currentGamemode = "overall";
 
 async function loadPlayers() {
-  const res = await fetch("https://207a685c-33f7-4709-a247-101f6a05420a-00-nsnc0sy5rpo5.picard.replit.dev/players.json");
+  const res = await fetch("http://watermelon.fps.ms:11527/players.json");
   players = await res.json();
   renderPlayers();
 }
